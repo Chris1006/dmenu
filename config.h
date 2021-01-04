@@ -10,14 +10,29 @@ static const char *fonts[] = {
 	"monospace:size=11:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+
+static const char norm_fg[] = "#88C0D0";
+static const char norm_bg[] = "#2E3440";
+static const char norm_border[] = "#4C566A";
+
+static const char bar_border[] = "#4C566A";
+
+static const char sel_fg[] = "#D08770";
+static const char sel_bg[] = "#4C566A";
+static const char sel_border[] = "#8FBCBB";
+
+static const char urg_fg[] = "#8FBCBB";
+static const char urg_bg[] = "#88C0D0";
+static const char urg_border[] = "#88C0D0";
+
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bdae93", "#3c3836" },
-	[SchemeSel] = { "#1d2021", "#8ec07c" },
-	[SchemeOut] = { "#000000", "#00ffff" },
-    [SchemeSelHighlight] = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#83a598" },
-    [SchemeMid] = { "#e5c4a1", "#282828" },
+	[SchemeNorm] = { norm_fg, norm_bg },
+	[SchemeSel] = { sel_fg, sel_bg },
+	[SchemeOut] = { norm_fg, norm_bg },
+  [SchemeSelHighlight] = { urg_fg, norm_border },
+	[SchemeNormHighlight] = { urg_fg, norm_border },
+    [SchemeMid] = { norm_fg, norm_bg },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
