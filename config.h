@@ -11,27 +11,27 @@ static const char *fonts[] = {
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 
-static const char norm_fg[] = "#88C0D0";
-static const char norm_bg[] = "#2E3440";
-static const char norm_border[] = "#4C566A";
+static const char norm_fg[] = "#bdae93";
+static const char norm_bg[] = "#1d2021";
+static const char norm_border[] = "#504945";
 
-static const char bar_border[] = "#4C566A";
+static const char bar_border[] = "#504945";
 
-static const char sel_fg[] = "#D08770";
-static const char sel_bg[] = "#4C566A";
-static const char sel_border[] = "#8FBCBB";
+static const char sel_fg[] = "#ebdbb2";
+static const char sel_bg[] = "#504945";
+static const char sel_border[] = "#bdae93";
 
-static const char urg_fg[] = "#8FBCBB";
-static const char urg_bg[] = "#88C0D0";
-static const char urg_border[] = "#88C0D0";
+static const char urg_fg[] = "#cc241d";
+static const char urg_bg[] = "#1d2021";
+static const char urg_border[] = "#504945";
 
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { norm_fg, norm_bg },
 	[SchemeSel] = { sel_fg, sel_bg },
 	[SchemeOut] = { norm_fg, norm_bg },
-  [SchemeSelHighlight] = { urg_fg, norm_border },
-	[SchemeNormHighlight] = { urg_fg, norm_border },
+  [SchemeSelHighlight] = { urg_fg, sel_bg },
+	[SchemeNormHighlight] = { urg_fg, norm_bg },
     [SchemeMid] = { norm_fg, norm_bg },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
